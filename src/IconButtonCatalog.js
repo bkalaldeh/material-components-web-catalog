@@ -40,7 +40,7 @@ class IconButtonToggle extends Component {
   render() {
     return (
       <div>
-        <button className='mdc-icon-button'
+        <button className='mdc-theme--primary mdc-icon-button'
           aria-pressed='false'
           aria-label='Add to favorites'
           ref={this.initIconButtonToggle}>

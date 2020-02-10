@@ -47,7 +47,7 @@ const Checkbox = (props) => {
 };
 
 const HeaderCell = (props) => {
-  const classes = classNames(extraCssClasses.HEADER_CELL, props.classes);
+  const classes = classNames(extraCssClasses.HEADER_CELL, props.classes, 'mdc-theme--text-primary-on-background');
 
   return (
     <th className={classes} role='columnheader' scope='col'>
@@ -59,7 +59,7 @@ const HeaderCell = (props) => {
 const Cell = (props) => {
   const classes = classNames(cssClasses.CELL, {
     [cssClasses.CELL_NUMERIC]: props.isNumeric,
-  }, props.classes);
+  }, props.classes, 'mdc-theme--text-primary-on-background');
   const { id } = props;
 
   return (

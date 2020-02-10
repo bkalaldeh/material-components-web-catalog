@@ -84,7 +84,7 @@ class ComponentImageList extends Component {
           </div>
 
           <div className='mdc-image-list__supporting'>
-            <span className='catalog-image-list-label mdc-image-list__label'>{title}</span>
+            <span className='mdc-theme--text-primary-on-background catalog-image-list-label mdc-image-list__label'>{title}</span>
           </div>
         </Link>
       </li>

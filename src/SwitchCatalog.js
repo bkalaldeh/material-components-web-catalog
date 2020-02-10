@@ -56,7 +56,7 @@ class Switch extends Component {
             </div>
           </div>
         </div>
-        <label htmlFor={this.props.inputId}>{this.props.label}</label>
+        <label className='mdc-theme--secondary' htmlFor={this.props.inputId}>{this.props.label}</label>
       </span>
     );
   }

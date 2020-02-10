@@ -69,7 +69,7 @@ class ListItem extends Component {
   renderTrailingIcon() {
     if (this.props.trailingIcon) {
       return (
-        <span className='mdc-list-item__meta material-icons' aria-hidden='true'>{this.props.trailingIcon}</span>
+        <span className='mdc-theme--on-primary mdc-list-item__meta material-icons' aria-hidden='true'>{this.props.trailingIcon}</span>
       );
     }
   }
@@ -152,7 +152,7 @@ class List extends Component {
   }
 
   render() {
-    const classes = classnames('mdc-list demo-list', {
+    const classes = classnames('mdc-list demo-list mdc-theme--secondary', {
       'mdc-list--dense': this.props.dense,
       'mdc-list--two-line': this.props.twoLines,
       'mdc-list--avatar-list': this.props.avatars,

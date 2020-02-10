@@ -18,7 +18,7 @@ const TypographyCatalog = () => {
 const TypographyHero = () => {
   return (
     <div>
-      <h1 className='mdc-typography--headline1'>Typography</h1>
+      <h1 className='mdc-theme--primary mdc-typography--headline1'>Typography</h1>
     </div>
   )
 };

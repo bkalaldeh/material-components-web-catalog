@@ -53,7 +53,7 @@ class MenuDemos extends Component {
       <div>
         <h3 className='mdc-typography--subtitle1'>Anchored Menu</h3>
         <button className='mdc-button' onClick={this.handleOpenClick_}>Open menu</button>
-        <div className='mdc-menu-surface--anchor'>
+        <div className='mdc-theme--on-surface mdc-menu-surface--anchor'>
           <Menu open={this.state.open} focusIndex={this.state.focusIndex} handleSelected={this.handleSelected_} handleCancel={this.handleCancel_}>
             <MenuItem name='Passionfruit' />
             <MenuItem name='Orange' />
@@ -117,7 +117,7 @@ class Menu extends Component {
 
     return (
       <div className={classes} tabIndex={this.props.open ? 0 : -1} ref={this.initMenu}>
-        <ul className='mdc-list' role='menu' aria-hidden='true'>
+        <ul className='mdc-theme--on-surface mdc-list' role='menu' aria-hidden='true'>
           {this.props.children}
         </ul>
       </div>
@@ -132,7 +132,7 @@ const MenuDOM = (props) => {
 
   return (
     <div className={classes} tabIndex={props.open ? 0 : -1} >
-      <ul className='mdc-list' role='menu' aria-hidden='true'>
+      <ul className='mdc-theme--on-surface mdc-list' role='menu' aria-hidden='true'>
         {props.children}
       </ul>
     </div>

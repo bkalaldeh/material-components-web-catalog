@@ -88,7 +88,7 @@ class ComponentCatalogPanel extends Component {
 
     return(
       <section className={`component-catalog-panel ${initialConfig ? 'component-catalog-panel--v2-hero' : ''}`}>
-        <div className='component-catalog-panel__hero-area'>
+        <div className='mdc-theme--text-primary-on-background component-catalog-panel__hero-area'>
           <div className='component-catalog-panel__header'>
             <h1 className='component-catalog-panel__header-elements mdc-typography--headline3'>{title}</h1>
             <p className='component-catalog-panel__header-elements mdc-typography--body1'>{description}</p>
@@ -101,15 +101,18 @@ class ComponentCatalogPanel extends Component {
           </div>
         </div>
 
-        <h2 className='demo-title mdc-typography--headline6'>Resources</h2>
-        <ul className='component-catalog-resources'>
+        <h2 className='mdc-theme--text-primary-on-background  demo-title mdc-typography--headline6'>Resources</h2>
+        <ul className='mdc-theme--text-primary-on-background  component-catalog-resources'>
           {this.renderResource('Material Design Guidelines', `${imagePath}/ic_material_design_24px.svg`, designLink)}
           {this.renderResource('Documentation', `${imagePath}/ic_drive_document_24px.svg`, docsLink)}
           {this.renderResource('Source Code', `${imagePath}/ic_code_24px.svg`, sourceLink)}
         </ul>
 
-        <h2 className='demo-title mdc-typography--headline6'>Demos</h2>
-        {demos}
+        <h2 className='mdc-theme--text-primary-on-background  demo-title mdc-typography--headline6'>Demos</h2>
+        <div className= 'mdc-theme--text-primary-on-background'>
+          {demos}
+        </div>
+
       </section>
     );
   }

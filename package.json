@@ -75,7 +75,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js"
   },
-  "homepage": "https://material-components.github.io/material-components-web-catalog",
+  "homepage": "https://material-components.github.io/plugins/materialDesignPreview_updated/widget",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,mjs}"

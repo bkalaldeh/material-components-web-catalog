@@ -91,17 +91,17 @@ export class Select extends Component {
       return (<div className={`mdc-select mdc-select--outlined demo-enhanced-select ${widthClass}`} ref={this.initSelect}>
         <div className='mdc-select__anchor custom-enhanced-select-width'>
           <i className='mdc-select__dropdown-icon' />
-          <div id='demo-selected-text' className='mdc-select__selected-text' />
+          <div id='demo-selected-text' className='mdc-theme--text-primary-on-background mdc-select__selected-text' />
           <div className='mdc-notched-outline'>
             <div className='mdc-notched-outline__leading' />
             <div className='mdc-notched-outline__notch'>
-              <label id={`${selectId}-label`} class='mdc-floating-label'>{indicatorText}</label>
+              <label id={`${selectId}-label`} class='mdc-theme--text-primary-on-background mdc-floating-label'>{indicatorText}</label>
             </div>
             <div className='mdc-notched-outline__trailing' />
           </div>
         </div>
         <div className={`mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width ${widthClass}`}>
-          <ul className='mdc-list'>
+          <ul className='mdc-theme--text-primary-on-background mdc-list'>
             {
               options.map((opt, index) => (
                 <li
@@ -129,7 +129,7 @@ export class Select extends Component {
             <div className='mdc-line-ripple' />
           </div>
           <div className={`mdc-select__menu mdc-menu mdc-menu-surface demo-enhanced-select custom-enhanced-select-width ${widthClass}`}>
-            <ul className='mdc-list'>
+            <ul className='mdc-theme--text-primary-on-background mdc-list'>
               {
                 options.map((opt, index) => (
                   <li

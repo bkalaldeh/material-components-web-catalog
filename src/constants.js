@@ -1,4 +1,4 @@
-const imagePath = `${window.location.origin}${window.location.pathname}static/media`;
+const imagePath = 'static/media';
 
 const gtagButtonAction = 'button_click';
 const gtagCategory = 'Component Interaction';

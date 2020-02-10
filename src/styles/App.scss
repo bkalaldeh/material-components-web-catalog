@@ -21,8 +21,12 @@ body {
   @include mdc-image-list-standard-columns(4, $component-list-gutter-size);
 
   max-width: 900px;
-  padding-top: 128px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 0;
+
+  height: 100vh;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: map-get($breakpoints, tablet)) {
@@ -47,4 +51,9 @@ body {
 
 a.catalog-image-link {
   text-decoration: none;
+}
+
+.mdc-theme--text-primary-on-background::placeholder {
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: var(--mdc-theme-text-primary-on-background, rgba(0, 0, 0, 0.87)) !important;
 }
