@@ -17,7 +17,7 @@ export const TextField = (props) => {
   const {
     textFieldId, outlined, textarea,
     dense, leading, trailing, helperText, characterCounter, className, onClick,
-    noLabel, placeholder, themed
+    noLabel, placeholder, themed, required
   } = props;
   const classes = classnames('mdc-text-field', 'text-field', className, {
     'mdc-text-field--outlined': outlined,
@@ -38,8 +38,8 @@ export const TextField = (props) => {
         {characterCounter && textarea ? <CharacterCounter /> : null}
         {leading && <i className={themed ? 'mdc-theme--text-primary-on-background material-icons mdc-text-field__icon' : 'material-icons mdc-text-field__icon' }>event</i>}
         {textarea ?
-          <TextArea textFieldId={textFieldId} onClick={onClick} maxLength={maxLengthValue} placeholder={placeholder} noLabel={noLabel} themed={themed}/> :
-          <Input textFieldId={textFieldId} onClick={onClick} maxLength={maxLengthValue} placeholder={placeholder} noLabel={noLabel} ariaDescribedBy={helperTextId} themed={themed}/>}
+          <TextArea textFieldId={textFieldId} onClick={onClick} maxLength={maxLengthValue} placeholder={placeholder} noLabel={noLabel} themed={themed} required={required}/> :
+          <Input textFieldId={textFieldId} onClick={onClick} maxLength={maxLengthValue} placeholder={placeholder} noLabel={noLabel} ariaDescribedBy={helperTextId} themed={themed} required={required}/>}
         {outlined || textarea || noLabel ? null : <Label textFieldId={textFieldId} dense={dense}/>}
         {trailing && <i className={themed ? 'mdc-theme--text-primary-on-background material-icons mdc-text-field__icon' : 'material-icons mdc-text-field__icon' }>delete</i>}
         {outlined || textarea ? <Outline noLabel={noLabel} textFieldId={textFieldId}/> : <div className='mdc-line-ripple'></div>}
@@ -102,24 +102,26 @@ const Label = ({textFieldId, themed}) => (
   </label>
 );
 
-const Input = ({placeholder, textFieldId, onClick, noLabel, maxLength, ariaDescribedBy, themed}) => (
+const Input = ({placeholder, textFieldId, onClick, noLabel, maxLength, ariaDescribedBy, themed, required}) => (
   <input type='text'
     id={textFieldId}
     placeholder={placeholder}
     className= {themed ? 'mdc-theme--text-primary-on-background mdc-text-field__input' : 'mdc-text-field__input' }
     onClick={onClick}
     maxLength={maxLength}
+    required={required}
     aria-label={noLabel ? 'Text field aria label' : null}
     aria-describedby={ariaDescribedBy || null} />
 );
 
-const TextArea = ({placeholder, textFieldId, onClick, noLabel, maxLength, themed}) => (
+const TextArea = ({placeholder, textFieldId, onClick, noLabel, maxLength, themed, required}) => (
   <textarea
     id={textFieldId}
     placeholder={placeholder}
     className= {themed ? 'mdc-theme--text-primary-on-background mdc-text-field__input' : 'mdc-text-field__input' }
     onClick={onClick}
     maxLength={maxLength}
+    required={required}
     aria-label={noLabel ? 'Text field aria label' : null} />
 );
 
@@ -360,6 +362,14 @@ class TextFieldDemos extends Component {
             <TextField outlined helperText textFieldId='text-field-outlined-cc1' characterCounter themed />
             <TextField outlined helperText textFieldId='text-field-outlined-cc2' characterCounter className='demo-text-field-outlined-shaped' themed />
           </div>
+        </div>
+        <div>
+            <h3 className='mdc-typography--subtitle1'>Required Text Field with Character Counter</h3>
+            <div className='text-field-row'>
+                <TextField helperText textFieldId='text-field-filled-cc' characterCounter required />
+                <TextField outlined helperText textFieldId='text-field-outlined-cc1' characterCounter themed required />
+                <TextField outlined helperText textFieldId='text-field-outlined-cc2' characterCounter className='demo-text-field-outlined-shaped' themed required />
+            </div>
         </div>
         <div>
           <h3 className='mdc-typography--subtitle1'>Textarea</h3>

@@ -57,3 +57,23 @@ a.catalog-image-link {
   color: rgba(0, 0, 0, 0.87) !important;
   color: var(--mdc-theme-text-primary-on-background, rgba(0, 0, 0, 0.87)) !important;
 }
+
+.mdc-drawer, .mdc-drawer .mdc-list {
+  background-color: #fff;
+  background-color: var(--mdc-theme-surface, #fff);
+}
+
+.mdc-drawer .mdc-list .mdc-list-item, .mdc-drawer, .mdc-drawer .mdc-list .mdc-list-item__graphic {
+  color: #000 !important;
+  color: var(--mdc-theme-on-surface, #000) !important;
+}
+
+.mdc-drawer .mdc-list .mdc-list-item--activated, .mdc-drawer .mdc-list .mdc-list-item--activated .mdc-list-item__graphic {
+  color: #6200ee !important;
+  color: var(--mdc-theme-primary, #6200ee) !important;
+}
+
+.mdc-drawer .mdc-drawer__title, .mdc-drawer .mdc-drawer__subtitle {
+  color: #000 !important;
+  color: var(--mdc-theme-on-surface, #000) !important;
+}

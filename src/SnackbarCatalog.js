@@ -28,7 +28,7 @@ export const SnackbarHero = () => {
                  role='status'
                  aria-live='polite'>Can't send photo. Retry in 5 seconds.</div>
             <div className='mdc-snackbar__actions'>
-              <button type='button' className='mdc-button mdc-snackbar__action'><div className='mdc-button__ripple'></div>Retry</button>
+              <button type='button' className='mdc-theme--error mdc-button mdc-snackbar__action'><div className='mdc-button__ripple'></div>Retry</button>
               <button className='mdc-icon-button mdc-snackbar__dismiss material-icons' title='Dismiss'>close</button>
             </div>
           </div>
